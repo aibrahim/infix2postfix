@@ -7,8 +7,6 @@
 int
 main()
 {
-	printf("%d\n", highprec('/', '*'));
-	/*
 	char buf[BUFSIZE], s[BUFSIZE], temp[BUFSIZE];
 	int type;
 	
@@ -42,7 +40,6 @@ main()
 				break;
 		}
 	}
-	*/
 	return 0;
 }
 
