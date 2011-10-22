@@ -19,7 +19,7 @@ main()
 				if(empty())
 					push(type);
 				else {
-						while(!empty() && highprec(type, topstack())) {
+						while(!empty() && higherp(type, topstack())) {
 							temp[0] = pop();
 							temp[1] = '\0';
 							addstr(buf, temp);
