@@ -12,13 +12,18 @@ addstr(char to[], char from[]) {
 /*
 	check if b has higher precedence than a
  */
+
 int
-highprec(char a, char b) {
+higherp(int a, int b) {
 	if(b == '*' || b == '/')
 		return 1;
-	else if((b == '+' || b == '-')) {
-		if(a == '+' || a == '-')
-			return 1;
-	} else
-		return 0;
+	if(b == '-' && a == '+')
+		return 1;
+	if(b == '+' && a == '-')
+		return 1;
+	if(b == '*' && a == '/')
+		return 1;
+	if(b == '/' && a == '*')
+		return 1;
+	return 0;
 }
