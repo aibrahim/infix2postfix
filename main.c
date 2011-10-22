@@ -19,14 +19,12 @@ main()
 				if(empty())
 					push(type);
 				else {
-					while(!empty() && highprec(type, topstack())) {
-						if(highprec(type, topstack())) {
+						while(!empty() && highprec(type, topstack())) {
 							temp[0] = pop();
 							temp[1] = '\0';
 							addstr(buf, temp);
-						} else
-							push(type);
-					}
+						}
+						push(type);
 				}
 				break;
 			case '\n':
