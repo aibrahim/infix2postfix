@@ -3,8 +3,7 @@
 #include "def.h"
 
 int
-getop(char s[])
-{
+getop(char s[]) {
 	int i, c;
 	
 	while((s[0] = c = getch()) == ' ' || c == '\t')

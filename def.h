@@ -8,4 +8,4 @@ int topstack(void);
 int getch(void);
 void ungetch(int);
 void addstr(char [], char []);
-int highprec(char, char);
+int higherp(char);

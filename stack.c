@@ -6,8 +6,7 @@ int stack[MAX];
 int sp = 0;
 
 void
-push(int op)
-{
+push(int op) {
 	if(sp >= MAX)
 		printf("error: stack full\n");
 	else
@@ -15,8 +14,7 @@ push(int op)
 }
 
 int
-pop(void)
-{
+pop(void) {
 	if(sp > 0)
 		return stack[--sp];
 	else {
@@ -27,13 +25,17 @@ pop(void)
 
 int
 empty(void) {
-	return (sp == 0) ? 1 : 0;
+	return (sp > 0) ? 0 : 1;
 }
 
 int 
 topstack(void)
 {
-	return stack[sp];
+	int tops = 0;
+	if(sp >= 0)
+		tops = stack[--sp];
+	sp++;
+	return tops;
 }
 
 void cleanstack(void) {

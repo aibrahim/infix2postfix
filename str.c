@@ -14,16 +14,14 @@ addstr(char to[], char from[]) {
  */
 
 int
-higherp(int a, int b) {
-	if(b == '*' || b == '/')
-		return 1;
-	if(b == '-' && a == '+')
-		return 1;
-	if(b == '+' && a == '-')
-		return 1;
-	if(b == '*' && a == '/')
-		return 1;
-	if(b == '/' && a == '*')
-		return 1;
+higherp(int c) {
+	switch(c) {
+		case '+': case '-':
+			return 1;
+			break;
+		case '*': case '/':
+			return 2;
+			break;
+	}
 	return 0;
 }
