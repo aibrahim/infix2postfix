@@ -29,8 +29,7 @@ empty(void) {
 }
 
 int 
-topstack(void)
-{
+topstack(void) {
 	int tops = 0;
 	if(sp >= 0)
 		tops = stack[--sp];

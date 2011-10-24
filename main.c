@@ -12,6 +12,9 @@ main()
 	
 	while((type = getop(s)) != EOF) {
 		switch(type) {
+			case '(':
+				push(type);
+				break;
 			case NUMBER:
 				addstr(buf, s);
 				break;
@@ -26,6 +29,15 @@ main()
 						}
 						push(type);
 				}
+				break;
+			case ')':
+				while(topstack() != '(') {
+					temp[0] = pop();
+					temp[1] = '\0';
+					addstr(buf, temp);
+				}
+				if(!empty())
+					pop();
 				break;
 			case '\n':
 				while(!empty()) {
